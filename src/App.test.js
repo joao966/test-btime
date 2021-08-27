@@ -1,38 +1,32 @@
 //Stage de teste
 import React from 'react';
-import {render, screen} from '@testing-library/react'
-import { BrowserRouter, Router} from 'react-router-dom';
+import {fireEvent, getByText, screen} from '@testing-library/react';
+import renderWithRouterAndRedux from './services/RenderReduxAndRouter';
 import App from './App';
 import userEvent from '@testing-library/user-event';
-import {createMemoryHistory} from 'history';
 
 describe('Page Home', () => {
-  test('testa se a pagina home possui um botão', () => {
-    render(
-      <BrowserRouter>
-        <App/>
-      </BrowserRouter>
+  test('testa se a rota é a raiz e se a pagina possui um botão', () => {
+    const { history } = renderWithRouterAndRedux(
+      <App/>
     );
 
-    const button = screen.getByRole('link');
-    expect(button).toBeInTheDocument();
+    expect(history.location.pathname).toBe('/');
+
+    const button = screen.getByRole('link', {
+      name: /entrar/i
+    })
+    expect(button).toBeDefined();
   })
 })
 
 describe('Pagina ranking', () => {
-  test('teste input', () => {
-    const history = createMemoryHistory();
-
-    render(
-      <Router history={history}>
-        <App />
-      </Router>
+  test('testa se a pagina muda para a rota ranking', () => {
+    const { history } = renderWithRouterAndRedux(
+      <App />
     )
 
-    history.push('/ranking')
-    const input = screen.getByRole('textbox');
-    userEvent.type(input, 'teste input');
-
-    expect(input).toHaveValue('Teste input');
+    history.push('/ranking');
+    expect(history.location.pathname).toBe('/ranking');
   })
 })
