@@ -1,5 +1,11 @@
+//importações
+//bibliotecas
 import React, { useState } from 'react';
+
+//services
 import auxFor from '../services/FilterCountries';
+
+//imagens
 import iconGold from '../assets/medalha-de-ouro.png';
 import iconSilver from '../assets/medalha-de-prata.png';
 import iconBronze from '../assets/medalha-de-bronze.png';
@@ -8,8 +14,11 @@ import iconCountry from '../assets/world-globe.png';
 import iconAthlete from '../assets/medalha-de-honra.png';
 import iconmedal from '../assets/atletismo.png';
 import iconSearch from '../assets/search.png';
+
+//style
 import '../style/Ranking.css';
 
+//documento declarativo
 function Ranking() {
   const [ check, setCheck ] = useState(false);
   const [ country, setCountry ] = useState(false);
@@ -38,49 +47,49 @@ function Ranking() {
       <div className="d-flex bd-highlight">
         <div className="p-2 flex-grow-1 bd-highlight flex-wrap">
             <div className="contentCenter">
-                <div className="contentGold">
-                  <img className="medalCountry" src={iconCountry} alt="" title="country"/>
-                </div>
-                <div className="contentGold">
-                  <img className="medalGold" src={iconGold} alt="medalgold" title="gold"/>
-                </div>
-                <div className="contentGold">
-                  <img className="medalSilver" src={iconSilver} alt="medalgold" title="silver"/>
-                </div>
-                      <div className="contentGold">
-                        <img className="medalBronze" src={iconBronze} alt="medalgold"  title="bronze"/>
-                      </div>
-                      <div className="contentGold">
-                        <img className="medalTotal" src={iconSum} alt="" title="total" />
-                </div>
+              <div className="contentGold">
+                <img className="medalCountry" src={iconCountry} alt="" title="country"/>
               </div>
+              <div className="contentGold">
+                <img className="medalGold" src={iconGold} alt="medalgold" title="gold"/>
+              </div>
+              <div className="contentGold">
+                <img className="medalSilver" src={iconSilver} alt="medalgold" title="silver"/>
+              </div>
+              <div className="contentGold">
+                <img className="medalBronze" src={iconBronze} alt="medalgold"  title="bronze"/>
+              </div>
+              <div className="contentGold">
+                <img className="medalTotal" src={iconSum} alt="" title="total" />
+              </div>
+          </div>
           <table className="table table-sm">
               <thead>
-                  <tr>
+                <tr>
                     <th className='country'>País</th>
                     <th className='golds'>Ouro</th>
                     <th className='silvers'>Prata</th>
                     <th className='bronze'>Bronze</th>
                     <th className='total'>Total</th>
-                  </tr>
-              </thead>
-            <tbody>
-            {
-              auxFor.sort((a, b) => b.total - a.total).filter((cur) => cur.pais.includes(inputValue.toUpperCase()))
-              .map((cur, index) => (
-                <tr key={index}>
-                  <td>
-                    <input name="input-radio" defaultChecked={ check } onChange={ () => handleCheck(cur.pais) } type="radio" />
-                    {cur.pais}
-                  </td>
-                  <td>{ cur.ouro }</td>
-                  <td>{ cur.prata }</td>
-                  <td>{ cur.bronze }</td>
-                  <td>{ cur.total }</td>
                 </tr>
-              ))
-            }
-            </tbody>
+              </thead>
+              <tbody>
+              {
+                auxFor.sort((a, b) => b.total - a.total).filter((cur) => cur.pais.includes(inputValue.toUpperCase()))
+                .map((cur, index) => (
+                  <tr key={index}>
+                    <td>
+                      <input name="input-radio" defaultChecked={ check } onChange={ () => handleCheck(cur.pais) } type="radio" />
+                      {cur.pais}
+                    </td>
+                    <td>{ cur.ouro }</td>
+                    <td>{ cur.prata }</td>
+                    <td>{ cur.bronze }</td>
+                    <td>{ cur.total }</td>
+                  </tr>
+                ))
+              }
+              </tbody>
           </table>
         </div>
         <div className="p-2 bd-highlight">
@@ -125,4 +134,5 @@ function Ranking() {
   );
 }
 
+//exportação
 export default Ranking;

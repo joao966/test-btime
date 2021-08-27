@@ -4,9 +4,14 @@ import PropTypes from 'prop-types';
 
 function Header({ name }) {
   return (
-    <div className='centerHeader'>
-      { name }
-    </div>
+    <header className="header">
+      <div className="name">
+        {name ? `Bem-Vindo(a) - ${ name }`: ''}
+      </div>
+      <div className="imgHeader">
+        <img src="https://dbdzm869oupei.cloudfront.net/img/sticker/preview/16268.png" alt="" />
+      </div>
+    </header>
   )
 }
 

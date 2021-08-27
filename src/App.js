@@ -1,13 +1,21 @@
+//importações
+//blibiotecas
 import React from 'react';
-import Ranking from './pages/Ranking';
 import { BrowserRouter, Route } from 'react-router-dom';
-import Home from './pages/Home';
-import Header from './components/Header';
-import './style/Header.css';
 
+//componentes
+import Home from './Pages/Home';
+import Header from './components/Header';
+import Ranking from './Pages/Ranking';
+
+//style
+import './style/Header.css';
+import './App.css';
+
+//documento declarativo
 function App() {
   return (
-    <div className="App-header">
+    <div >
       <Header />
       <BrowserRouter>
         <Route exact path="/" component={ Home } />
@@ -17,4 +25,5 @@ function App() {
   );
 }
 
+//exportação
 export default App;

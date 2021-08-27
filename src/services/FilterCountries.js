@@ -23,7 +23,7 @@ function formatDate() {
     (h, car) => Object.assign(h, { [car.country]:( h[car.country] || []
   )
   .concat(
-    {athlete: car.athlete, medal: car.medal, country: car.country, sex: car.sex, event: car.event}) }), []
+    {athlete: car.athlete, medal: car.medal, country: car.country}) }), []
   );
 
   let ouro = 0;

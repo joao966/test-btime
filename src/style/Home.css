@@ -2,14 +2,45 @@
   margin: 0;
   width: 100%;
   height: 100vmin;
-  background-image: url('https://www.joacaba.sc.gov.br/uploads/424/imagens/1940447.jpg');
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: 100vh;
 }
 
 .text {
   display: flex;
   flex-direction: column;
   align-items: center;
+}
+
+h1 {
+  margin-bottom: 40px;
+}
+
+.link {
+  border: 1px solid white;
+  color: wheat;
+  text-decoration: none;
+  width: 150px;
+  height: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 20px;
+  border-radius: 100px;
+}
+
+.link:hover {
+  background-color: aquamarine;
+  color: wheat;
+  transition: ease 0.2s;
+}
+
+.img {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+img {
+  width: 400px;
+  margin-top: 20px;
 }
