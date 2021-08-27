@@ -1,25 +1,25 @@
 import data from './medalists.json';
 
-const arrayFilter = data.map((cur) => cur.country);
-const noRepeat = [...new Set(arrayFilter)];
-let result = [];
+const filterCountries = data.map((country) => country.country);
+const noRepeatCountries = [...new Set(filterCountries)];
+let filterResult = [];
 
-const arrayFinal = [];
-function filterCountries() {
-  noRepeat.forEach((curRepeat) => {
+const filtercountriesRepeat = [];
+function filterCountriesFunction() {
+  noRepeatCountries.forEach((curRepeat) => {
     data.filter((curFilter) => {
       if(curRepeat === curFilter.country) {
         const obj = curFilter;
-        arrayFinal.push(obj);
+        filtercountriesRepeat.push(obj);
       }
     })
   })
 }
-filterCountries();
+filterCountriesFunction();
 
-const auxFor = [];
+const countriesFinale = [];
 function formatDate() {
-  result = arrayFinal.reduce(
+  filterResult = filtercountriesRepeat.reduce(
     (h, car) => Object.assign(h, { [car.country]:( h[car.country] || []
   )
   .concat(
@@ -30,11 +30,11 @@ function formatDate() {
   let prata = 0;
   let bronze = 0;
 
-  const teste = Object.entries(result);
-  teste.forEach((cur) => {
-    const resgat = [];
+  const filterMedals = Object.entries(filterResult);
+  filterMedals.forEach((cur) => {
+    const countMedals = [];
       cur[1].forEach((aux) => {
-        resgat.push(aux);
+        countMedals.push(aux);
       })
       const format = {
       pais: cur[0],
@@ -44,7 +44,7 @@ function formatDate() {
       bronze,
       total: cur[1].length
     }
-    resgat.forEach((cur, index) => {
+    countMedals.forEach((cur) => {
       // console.log(cur)
       switch(cur.medal) {
         case 'Gold':
@@ -60,9 +60,9 @@ function formatDate() {
         // default
       }
     })
-    auxFor.push(format);                                   
+    countriesFinale.push(format);                                   
   })
 }
 formatDate();
 
-export default auxFor;
+export default countriesFinale;
