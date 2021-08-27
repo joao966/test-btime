@@ -5,8 +5,9 @@ import { BrowserRouter, Route } from 'react-router-dom';
 
 //componentes
 import Home from './Pages/Home';
-import Header from './components/Header';
 import Ranking from './Pages/Ranking';
+import Header from './Components/Header';
+import Footer from './Components/Footer';
 
 //style
 import './style/Header.css';
@@ -21,6 +22,7 @@ function App() {
         <Route exact path="/" component={ Home } />
         <Route exact path="/ranking" component={ Ranking } />
       </BrowserRouter>
+      <Footer />
     </div>
   );
 }
