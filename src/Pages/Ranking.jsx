@@ -44,7 +44,7 @@ function Ranking() {
         <input onChange={ handleChange } placeholder="Ex: USA" type="text" />
       </header>
 
-      <div className="d-flex bd-highlight">
+      <div className="d-flex bd-highlight teste">
         <div className="p-2 flex-grow-1 bd-highlight flex-wrap">
             <div className="contentCenter">
               <div className="contentGold">

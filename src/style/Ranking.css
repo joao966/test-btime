@@ -2,10 +2,8 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  /* background-image: url('https://brasil.cambly.com/wp-content/uploads/2019/08/sports-esportes-em-ingles.jpg'); */
   background-position: center;
   background-repeat: no-repeat;
-  /* background-size: 100vh; */
 }
 
 .contentCenter {
@@ -110,4 +108,57 @@
 
 table td, th {
   color: #f2f2f2;
+}
+
+
+@media screen and (max-width: 640px) {
+  
+  body {
+    width: 100%;
+    height: auto;
+  }
+
+  .inputSearch {
+    width: 100%;
+    height: auto;
+  }
+
+  .inputSearch p {
+    font-size: 20px;
+  }
+
+  .inputSearch input {
+    width: 150px;
+  }
+
+  .inputSearch img {
+    display: none;
+  }
+
+  .teste {
+    width: 100%;
+  }
+
+  .contentCenter {
+    width: 150px;
+  }
+
+  .contentCenter img {
+    width: 20px;
+  }
+
+  .contentCenterAthlete img {
+    width: 20px;
+  }
+  
+  .contentGold {
+    width: 70px;
+    margin-top: 10px;
+  }
+
+  .contentAthlete {
+    width:72px;
+    margin-top: 10px;
+  }
+
 }
