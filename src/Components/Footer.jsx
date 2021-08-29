@@ -1,7 +1,7 @@
 import React from 'react';
 import '../style/Footer.css';
 
-function Header() {
+function Footer() {
   return (
     <footer className="footer">
       <p>Desenvolvido por João Oliveira 2021</p>
@@ -9,4 +9,4 @@ function Header() {
   )
 }
 
-export default Header;
+export default Footer;

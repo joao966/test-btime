@@ -3,11 +3,11 @@ import { Provider } from 'react-redux';
 import { Router } from 'react-router-dom';
 import { createMemoryHistory } from 'history';
 import { render } from '@testing-library/react';
-import rootReducers from '../reducers/index';
+import rootReducers from '../Redux/reducers';
 import { createStore } from 'redux';
-// const initialState = {};
 
-const renderWithRouterAndRedux = (component, {
+const renderWithRouterAndRedux = (component,
+{
   state = {},
   store = createStore(rootReducers, state),
   initialRouter = ['/'],

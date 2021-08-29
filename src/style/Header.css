@@ -15,3 +15,11 @@
   font-family: monospace;
 }
 
+
+@media (max-width: 640px) {
+  
+  .header {
+    width: 100%;
+  }
+}
+

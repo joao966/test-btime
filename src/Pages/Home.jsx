@@ -6,7 +6,7 @@ import { Link } from 'react-router-dom';
 
 //gerenciador de estado
 //ações
-import { saveName } from '../actions';
+import { saveName } from '../Redux/actions';
 
 //estyle
 import '../style/Home.css';

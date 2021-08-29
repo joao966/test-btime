@@ -44,3 +44,30 @@ img {
   width: 400px;
   margin-top: 20px;
 }
+
+
+@media screen and (max-width: 640px) {
+  
+  body {
+    /* overflow: hidden; */
+    width: 100px;
+    height: max-content;
+  }
+
+  
+  .img img {
+    width: 150px;
+
+  }
+
+  .text input {
+    width: 100px;
+  }
+
+  .text h1 {
+    width: 150px;
+    font-size: 15px;
+    font-family: Impact, sans-serif;
+    margin-left:10px;
+  }
+}

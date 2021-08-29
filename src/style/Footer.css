@@ -1,7 +1,21 @@
 .footer {
-  width: 99%;
+  width: 100%;
   display: flex;
   justify-content: center;
-  position: absolute;
-  margin-top: 150px;
+  /* position: absolute; */
+  /* margin-top: 150px; */
+  background-color: white;
+}
+
+@media (max-width: 640px) {
+  
+  .footer footer {
+    margin-top:200px;
+    border: 1px solid white;
+  }
+
+  .footer p {
+    margin-top:100px;
+    color: black;
+  }
 }

@@ -3,7 +3,7 @@
 import React, { useState } from 'react';
 
 //services
-import auxFor from '../services/FilterCountries';
+import countries from '../Services/FilterCountries';
 
 //imagens
 import iconGold from '../assets/medalha-de-ouro.png';
@@ -38,7 +38,7 @@ function Ranking() {
 
   return (
     <div className='center'>
-      <header className="inputSearch ">
+      <header className="inputSearch">
         <p className="paragraph">Pesquise um país pela sigla</p>
         <img className="search" src={iconSearch} alt="" />
         <input onChange={ handleChange } placeholder="Ex: USA" type="text" />
@@ -75,17 +75,17 @@ function Ranking() {
               </thead>
               <tbody>
               {
-                auxFor.sort((a, b) => b.total - a.total).filter((cur) => cur.pais.includes(inputValue.toUpperCase()))
-                .map((cur, index) => (
+                countries.sort((a, b) => b.total - a.total).filter((country) => country.pais.includes(inputValue.toUpperCase()))
+                .map((country, index) => (
                   <tr key={index}>
                     <td>
-                      <input name="input-radio" defaultChecked={ check } onChange={ () => handleCheck(cur.pais) } type="radio" />
-                      {cur.pais}
+                      <input name="input-radio" defaultChecked={ check } onChange={ () => handleCheck(country.pais) } type="radio" />
+                      {country.pais}
                     </td>
-                    <td>{ cur.ouro }</td>
-                    <td>{ cur.prata }</td>
-                    <td>{ cur.bronze }</td>
-                    <td>{ cur.total }</td>
+                    <td>{ country.ouro }</td>
+                    <td>{ country.prata }</td>
+                    <td>{ country.bronze }</td>
+                    <td>{ country.total }</td>
                   </tr>
                 ))
               }
@@ -113,12 +113,12 @@ function Ranking() {
               </thead>
               <tbody>
               {
-                auxFor.map((curFilter) => {
-                  if (country.country === curFilter.pais) {
-                    return curFilter.atletas.map((cur, index) => (
+                countries.map((countrie) => {
+                  if (country.country === countrie.pais) {
+                    return countrie.atletas.map((athleta, index) => (
                       <tr key={index}>
-                        <td>{ cur.athlete }</td>
-                        <td>{ cur.medal }</td>
+                        <td>{ athleta.athlete }</td>
+                        <td>{ athleta.medal }</td>
                       </tr>
                     ))  
                   }

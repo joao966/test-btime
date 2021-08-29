@@ -1,9 +1,8 @@
 //Stage de teste
 import React from 'react';
-import {fireEvent, getByText, screen} from '@testing-library/react';
-import renderWithRouterAndRedux from './services/RenderReduxAndRouter';
-import App from './App';
-import userEvent from '@testing-library/user-event';
+import { screen } from '@testing-library/react';
+import renderWithRouterAndRedux from './RenderReduxAndRouter';
+import App from '../App';
 
 describe('Page Home', () => {
   test('testa se a rota é a raiz e se a pagina possui um botão', () => {
