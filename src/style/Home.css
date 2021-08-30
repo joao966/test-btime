@@ -8,6 +8,12 @@
   display: flex;
   flex-direction: column;
   align-items: center;
+  color: rgb(182, 169, 51);
+}
+
+.text input {
+  border-radius: 20%;
+  background-color: rgb(187, 187, 113);
 }
 
 h1 {
@@ -28,7 +34,7 @@ h1 {
 }
 
 .link:hover {
-  background-color: aquamarine;
+  background-color: rgb(185, 183, 70);
   color: wheat;
   transition: ease 0.2s;
 }

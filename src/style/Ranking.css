@@ -1,9 +1,9 @@
 .center {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  background-position: center;
-  background-repeat: no-repeat;
+  /* margin: 0; */
+  /* padding: 0; */
+  /* box-sizing: border-box; */
+  display: flex;
+  flex-wrap: wrap;
 }
 
 .contentCenter {
@@ -14,50 +14,46 @@
 
 .contentGold {
   display: flex;
+  align-items: center;
 }
+
+.contentGold p {
+  margin-top:30px;
+}
+
+.contentGold span {
+  margin-top:30px;
+}
+
 
 .medalCountry {
   width: 30px;
-  margin-right: 130px;
+  /* margin-right: 130px; */
 }
 
 .medalGold {
   width: 30px;
-  margin-right: 75px;
+  /* margin-right: 75px; */
 }
 .medalSilver {
   width: 30px;
-  margin-right: 90px;
+  /* margin-right: 90px; */
 }
 .medalBronze {
   width: 30px;
-  margin-right: 140px;
+  /* margin-right: 140px; */
 }
 
 .medalTotal {
   width: 30px;
-  margin-right: 190px;
+  /* margin-right: 190px; */
 }
 
-.tr {
-  display: flex;
-  justify-content: space-between;
-}
-
-.contentCenterAthlete {
-  display: flex;
-  justify-content: space-between;
-  width: 100%;
-}
-
-.contentMedalAthlete {
-  display: flex;
-}
 
 .medalAthlete {
   width: 30px;
-  margin-right: 30px;
-}
+  /* margin-right: 30px; */
+} 
 
 .inputSearch {
   display: flex;
@@ -71,31 +67,7 @@
   position: absolute;
   width: 28px;
   margin-left: 111px;
-  margin-top: 92px;
-}
-
-.line-table {
-  width: 100%
-}
-
-.country, .golds, .silvers, .bronze, .total {
-  opacity: 0;
-}
-
-.country:hover, .golds:hover, .silvers:hover, .bronze:hover, .total:hover {
-  opacity: 1;
-  transition: ease 0.2s;
-  cursor: pointer;
-}
-
-.athleta, .medal {
-  opacity: 0;
-}
-
-.medal:hover, .athleta:hover {
-  opacity: 1;
-  transition: ease 0.2s;
-  cursor: pointer;
+  margin-top: 45px;
 }
 
 
@@ -106,8 +78,84 @@
   color: darkgoldenrod;
 }
 
-table td, th {
-  color: #f2f2f2;
+.content-infer-card {
+  border: 1px solid white;
+  border-radius: 10%;
+  width: 400px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 10px;
+}
+
+.content-infer-card p {
+ margin-left: 200px;
+}
+
+.content-infer-card span {
+  margin-left: 10px;
+ }
+ 
+
+.content-infer-card-athleta {
+  width: 100%;
+  height: 300px;
+  border: 1px solid rgb(247, 234, 234);
+  border-radius: 10%;
+  width: 400px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.header {
+  width: 100%;
+}
+
+.d{
+  width: 100%;
+}
+
+.link {
+  border: 1px solid rgb(173, 172, 62);
+  color: wheat;
+  text-decoration: none;
+  width: 150px;
+  height: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 20px;
+  border-radius: 100px;
+}
+
+.link:hover {
+  background-color: rgb(182, 169, 51);
+  color: wheat;
+  transition: ease 0.2s;
+}
+
+.d h1 {
+  font-size: 50px;
+  color: rgb(182, 169, 51);
+  display: flex;
+  justify-content: center;
+  font-family: cursive;
+  font-style: italic;
+}
+
+.zoom {
+	overflow: hidden;
+}
+
+.zoom:hover {
+	-moz-transform: scale(1.1);
+	-webkit-transform: scale(1.3);
+	transform: scale(1.1);
+  box-shadow: 1px 1px 1px 1px rgb(238, 238, 236);
+  padding: 5px;
+  background-color: rgb(184, 182, 68);
+  color: black;
 }
 
 
@@ -135,10 +183,6 @@ table td, th {
     display: none;
   }
 
-  .teste {
-    width: 100%;
-  }
-
   .contentCenter {
     width: 150px;
   }
@@ -159,6 +203,21 @@ table td, th {
   .contentAthlete {
     width:72px;
     margin-top: 10px;
+  }
+
+  .contentGold {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .d h1 {
+    font-size: 50px;
+    display: flex;
+    justify-content: center;
+    font-family: cursive;
+    font-style: italic;
   }
 
 }
