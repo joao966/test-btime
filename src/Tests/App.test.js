@@ -27,5 +27,26 @@ describe('Pagina ranking', () => {
 
     history.push('/ranking');
     expect(history.location.pathname).toBe('/ranking');
+
+    const Heading = screen.getByRole('heading', {
+      level: 1
+    })
+    expect(Heading).toBeDefined();
+  })
+})
+
+describe('Pagina Athleta', () => {
+  test('testa se a pagina muda para a rota ranking/athletas', () => {
+    const { history } = renderWithRouterAndRedux(
+      <App />
+    )
+
+    history.push('/ranking/:country/athletas');
+    expect(history.location.pathname).toBe('/ranking/:country/athletas');
+
+    const Heading = screen.getByRole('heading', {
+      level: 1
+    })
+    expect(Heading).toBeDefined();
   })
 })
