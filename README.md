@@ -42,7 +42,8 @@ As seguintes ferramentas foram usadas na construção do projeto:
 * React Js
 * Redux
 * React Router
-* RTL
+* React Testing Library
+* Prop-Types
 
 
 ## 🚀 Como executar o projeto
