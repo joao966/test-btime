@@ -19,6 +19,7 @@ filterCountriesFunction();
 
 const countriesFinale = [];
 function formatDate() {
+  // source: https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/Object/assign
   filterResult = filtercountriesRepeat.reduce(
     (h, car) => Object.assign(h, { [car.country]:( h[car.country] || []
   )
@@ -45,7 +46,6 @@ function formatDate() {
       total: cur[1].length
     }
     countMedals.forEach((cur) => {
-      // console.log(cur)
       switch(cur.medal) {
         case 'Gold':
          format.ouro += 1

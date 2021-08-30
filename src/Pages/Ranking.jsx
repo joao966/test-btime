@@ -28,7 +28,7 @@ function Ranking() {
 
       <header className="inputSearch header ">
         <h1 className="paragraph">Pesquise um país pela sigla</h1>
-        <img className="search" src={iconSearch} alt="" />
+        <img className="search" src={iconSearch} alt="search" />
         <input onChange={ handleChange } placeholder="Ex: USA" type="text" />
       </header>
       

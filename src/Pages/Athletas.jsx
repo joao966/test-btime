@@ -7,7 +7,7 @@ import CardAthleta from '../Components/CardAthleta';
 function Athletas({location: { state: { country: { pais } } }}) {
   return (
     <div className="center">
-      <div className="d">
+      <div className="header-athleta">
         <h1>Atletas</h1>
       </div>
       {

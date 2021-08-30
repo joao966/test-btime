@@ -13,23 +13,23 @@ function Card({country}) {
   return (
     <div className="content-infer-card zoom" >
               <div className="contentGold">
-                <img className="medalCountry" src={iconCountry} alt="" />
+                <img className="medalCountry" src={iconCountry} alt="country" />
                 <span><strong>País:</strong> {country.pais}</span>
               </div>
               <div className="contentGold">
-                <img className="medalGold" src={iconGold} alt="" />
+                <img className="medalGold" src={iconGold} alt="gold" />
                 <p> { country.ouro }</p>
               </div>
               <div className="contentGold ">
-                <img className="medalSilver" src={iconSilver} alt="" />
+                <img className="medalSilver" src={iconSilver} alt="silver" />
                 <p > { country.prata }</p>
               </div>
               <div className="contentGold">
-                <img className="medalBronze" src={iconBronze} alt="" />
+                <img className="medalBronze" src={iconBronze} alt="bronze" />
                 <p>{ country.bronze }</p>
               </div>
               <div className="contentGold">
-                <img className="medalTotal" src={iconSum} alt="" />
+                <img className="medalTotal" src={iconSum} alt="total" />
                 <p>{ country.total }</p>
               </div>
               <Link className="link" to={ {
