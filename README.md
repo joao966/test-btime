@@ -29,7 +29,7 @@ Os usuários terão acesso Desktop e Mobile, onde poderão:
 
 ### Mobile
 
-<img src="src/assets/layout-mobile.jpg"/>
+<img src="src/assets/layout-mobile2.jpg"/>
 
 ### Desktop
 
